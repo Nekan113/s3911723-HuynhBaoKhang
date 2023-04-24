@@ -1,0 +1,391 @@
+/*--RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Huynh Bao Khang
+ID: s3911723
+Acknowledgement: jquery, fontawesome--*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200;1,400;1,500&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+#menu {
+    width: 100%;
+    padding:0px 30px;
+    margin-top:33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+#toggle {
+    display: none;
+    background:#ffffff;
+    color:#000000;
+    text-align:right;
+    padding:10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#menu {
+    list-style:none;
+    display: flex;
+}
+
+#menu .item {
+    margin:0px 25px;
+}
+
+#menu .item a {
+    color:#626A67;
+    text-decoration: none;
+    display: block;
+    padding:8px 15px;
+}
+
+#menu .item:hover a {
+    background:#ff0000
+}
+
+@media screen and (max-width: 768px){
+    #menu {
+        flex-direction: column;
+        text-align: center;
+    }
+    #toggle{
+        display:block;
+    }
+    menu {
+        display: none;
+    }
+}
+
+#wp-products {
+    padding-top:116px;
+    padding-bottom: 78px;
+    padding-left:134px;
+    padding-right:134px;
+}
+
+#wp-products h2 {
+    text-align: center;
+    margin-bottom: 76px;
+    font-size:32px;
+    color:#626a67;
+}
+
+
+#list-products {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#list-products .item {
+    width: 290px;
+    height: 274px;
+    background:#362f2f;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+#list-products .item img {
+    display: block;
+    margin:0px auto;
+    margin-top:17px;
+}
+
+#list-products .item .name {
+    text-align: center;
+    color:#fff;
+    font-weight: bold;
+    margin-top:21px;
+}
+
+#list-products .item .desc {
+    text-align: center;
+    color:#626a67;
+}
+
+#list-products .item .status {
+    text-align: center;
+    color:#28ff02;
+    font-weight: bold;
+    margin-top:20px;
+}
+
+
+.list-page {
+    width: 50%;
+    margin:0px auto;
+}
+
+.list-page {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-page .item {
+    margin:0px 15px;
+    width: 37px;
+    height: 37px;
+    background:#362f2f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list-page .item a {
+    color:#fff;
+    text-decoration: none;
+}
+
+.product{
+    padding: 100px 0;
+}
+
+.product-top {
+    margin-bottom: 30px;
+}
+
+.product-top.p{
+    font-family: var(--main-text-font);
+    margin: 0 12px;
+    font-size: 12px;
+}
+
+.row {
+    display: flex;
+    margin: 0 20px 0 20px;
+}
+
+.product-content-left{
+    width: 50%;
+}
+
+.product-content-left-big-img{
+    width: 80%;
+    padding-right: 20px;
+}
+
+.product-content-left-big-img img {
+    width:100%
+}
+
+.product-content-left-small-img{
+    width: 20%;
+}
+
+.product-content-left-small-img img {
+    width:100%;
+}
+
+
+.product-content-right{
+    width: 50%;
+    padding:20px;
+}
+
+.product-content-right-product-name h1{
+font-family: var(--main-text-font);
+font-size: 30px;
+}
+
+.product-content-right-product-price {
+    font-family: var(--main-text-font);
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+.product-content-right-product-author {
+    font-family: var(--main-text-font);
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+.product-content-right-product-button button {
+    width: 150px;
+    height: 40px;
+    display: block;
+    margin: 20px 0 12px;
+    transition: all 0.5s ease;
+}
+
+.product-content-right-product-button button:first-child:hover {
+    background-color: #000000;
+    color:#fff
+}
+
+.product-content-right-product-button button:last-child {
+    border: 2px solid #626A67;
+    color: #626A67;
+    background-color: #fff;
+}
+
+.product-content-bottom-top {
+
+    border-top: 1px solid #ca0101cc;
+    position:relative;
+}
+
+.product-content-bottom-top {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ca0101cc;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    left: 50%;
+    border-radius: 50%;
+}
+
+.product-content-bottom-top-header-total {
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.Contact_purpose{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.Your_name {
+    padding-left: 20px;
+}
+
+.Your_email{
+    padding-left: 20px;
+    padding-top: 60px;
+}
+
+.Contact_preference{
+    padding-left: 20px;
+    padding-top:70px;
+}
+
+.Receive_weekly_newsletter{
+    padding-left: 20px;
+}
+
+.Extra_notes{
+    padding-left: 20px;
+}
+
+.Submit{
+    padding-left: 20px;
+    padding-top:300px;
+}
+
+.name {
+    position: absolute;
+    width: 1000px;
+    height: 50px;
+    border: 1px solid #000000cc;
+    border-radius: 5%;
+    padding-top:10px;
+    padding-left:5px;  
+    margin: 10px;
+}
+
+.email{
+    position: absolute;
+    width: 1000px;
+    height: 50px;
+    border: 1px solid #000000cc;
+    border-radius: 5%;
+    padding-top:10px;
+    padding-left:5px;  
+    margin: 10px;
+}
+
+.extra_notes_box {
+    position: absolute;
+    width: 1000px;
+    height: 300px;
+    border: 1px solid #000000cc;
+    border-radius: 5%;
+    padding-top:0px;
+    padding-left:5px;
+    margin: 10px;
+}
+
+.contact_preference button {
+    width: 150px;
+    height: 40px;
+    display: block;
+    margin: 20px 0 12px;
+    transition: all 0.5s ease;
+
+}
+
+.receive_weekly_newsletter button {
+    width: 150px;
+    height: 40px;
+    display: block;
+    margin: 20px 0 12px;
+    transition: all 0.5s ease;
+
+}
+
+.Submit button {
+    width: 150px;
+    height: 40px;
+    display: block;
+    margin: 20px 0 12px;
+    transition: all 0.5s ease;
+
+}
+
+.Submit button:hover {
+    background-color: #00ff00;
+    color:#ff0000
+}
+
+#footer {
+    width: 100%;
+    background:rgb(0,0,0,0.79);
+    height: 322px;
+    margin-top:338px;
+    padding:0px 63px;
+    padding-top:57px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .box {
+    width: 250px;
+    color:#fff;
+}
+
+#footer .box .quick-menu {
+    margin-top:40px;
+
+}
+
+
+#footer .box .quick-menu .item{
+    margin-bottom:12px;
+
+}
+#footer .box .quick-menu ,.item a{
+    color:#fff;
+    text-decoration: none;
+}
